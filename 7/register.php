@@ -40,6 +40,7 @@ if (isset($_POST["register"])) {
         } else {
             $sql = "INSERT INTO register (name, email, password) VALUES ('$name', '$mail', '$pass')";
             $res = $db->query($sql);
+            $db->close();
             echo "Регистрация прошла успешно!";
         }
     }

@@ -2,16 +2,24 @@ h1 {
     color: #00840f;
 }
 
-a.index {
+content button.index {
     color: #a452b8;
-    margin-left: 10px;
- padding: 10px;
- font-size: 30px;
-    text-decoration: none;
+    background: none;
 }
 
-a.index:hover{
+button.index{
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.index:hover{
     color: aquamarine;
+    background-color: #9a2579;
+}
+a.index {
+    text-decoration: none;
+    color: black;
 }
 
 h2 {
