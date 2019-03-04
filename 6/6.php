@@ -2,12 +2,8 @@
 
 if (isset($_POST["email"])) {
     $mail = $_POST["email"];
-    if (preg_match('/^(A-Za-z0-9_-]+\.)*[A-Za-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/', $mail)){
-        $truemail = $mail;
-    };
-
-    if ($truemail != $mail) {
-        $arrerrors[] = "Некорректный email!";
+    if (!preg_match('/^(A-Za-z0-9_-]+\.)*[A-Za-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/', $mail)){
+        echo "Некорректный email!";
     } else {
         $mysqli = new mysqli('localhost', 'Krun', 'Koska200895', 'testdb');
 
@@ -19,15 +15,6 @@ if (isset($_POST["email"])) {
         } else {
             $sql = "INSERT INTO mail(email) VALUES ('$mail')";
             $mysqli->query($sql);
-        }
-    }
-
-    if (empty($arrerrors)) {
-        echo "Email внесён в базу";
-        die();
-    } else {
-        foreach ($arrerrors as $value){
-            echo '<div style="color:red">'.$value.'</div><hr>';
         }
     }
 }
