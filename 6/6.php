@@ -21,7 +21,7 @@ if (isset($_POST["email"])) {
 
 ?>
 
-<!DOCTYPE html>
+<?php /* <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,4 +36,5 @@ if (isset($_POST["email"])) {
     <button type="submit">Отправить</button>
 </form>
 </body>
-</html>
+</html> */
+?>
