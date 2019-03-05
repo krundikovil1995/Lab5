@@ -41,13 +41,6 @@ $db = new mysqli('localhost', 'Krun', 'Koska200895', 'mydb');
 $count2 = count($arrres);
 
 
-    $sql = "SELECT student.student_name, student.student_surname, subject.subject, grade.grade FROM student JOIN grade ON student.student_id = grade.student_student_id JOIN subject ON subject.subject_id = grade.subject_subject_id GROUP BY student_name NAVING COUNT(*) >= 1";
-    $result = $db->query($sql);
-    while ($row = $result->fetch_assoc()) {
-        dm($row);
-    }
-
-
 
 ?>
 
