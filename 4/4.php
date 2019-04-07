@@ -3,7 +3,7 @@
 $mysqli = new mysqli('localhost', 'Krun', 'Koska200895', 'testdb');
 
 
-$rowcount = 3;
+$rowcount = 9;
 
 
 $sql = "SELECT COUNT(*) as `total` FROM users";
